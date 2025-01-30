@@ -4,7 +4,7 @@ const createPet = () => {
   const pet = {};
   pet.id = faker.database.mongodbObjectId();
   pet.name = faker.animal.petName();
-  pet.species = faker.animal.type();
+  pet.specie = faker.animal.type();
   pet.adopted = false;
   return pet;
 };
