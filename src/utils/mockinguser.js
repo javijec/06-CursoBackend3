@@ -4,7 +4,7 @@ import bcrypt from "bcrypt";
 const createUser = () => {
   const user = {};
   user.id = faker.database.mongodbObjectId();
-  user.first_name = faker.person.firstName;
+  user.first_name = faker.person.firstName();
   user.last_name = faker.person.lastName();
   user.email = faker.internet.email();
   user.password = bcrypt.hashSync("coder123", 10);
