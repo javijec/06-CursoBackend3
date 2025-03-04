@@ -14,6 +14,9 @@ dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 8080;
 const connection = await mongoose.connect(process.env.MONGODB_URI);
+console.log(`Connected to ${connection.connection.name} database`);
+console.log(`Running in ${process.env.NODE_ENV} mode`);
+console.log(`Listening on ${PORT}`);
 
 app.use(express.json());
 app.use(cookieParser());
